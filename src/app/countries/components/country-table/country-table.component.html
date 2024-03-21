@@ -1,0 +1,39 @@
+@if (paises.length===0) {
+<div class="alert alert-warning text-center">
+    No hay paises que mostrar
+</div>
+}@else {
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Icon</th>
+            <th>Bandera</th>
+            <th>Nombre</th>
+            <th>Capital</th>
+            <th>Poblacion</th>
+            <th>Codigo</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (pais of paises; track pais; let i = $index) {
+        <tr>
+            <td>{{i+1}}</td>
+            <td>{{pais.flag}}</td>
+            <td><img [src]="pais.flags.svg" [alt]="pais.name.common"></td>
+            <td>{{pais.name.common}}</td>
+            <td>{{pais.capital}}</td>
+            <td>{{pais.population | number}}</td>
+            <td>{{pais.cca3 }}</td>
+            <td><a routerLink="/countries/by/{{pais.cca3}}">Info</a> </td>
+        </tr>
+        }@empty {
+        <tr>
+            No data
+        </tr>
+        }
+    </tbody>
+</table>
+}
