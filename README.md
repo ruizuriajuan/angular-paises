@@ -1,6 +1,6 @@
 # CountryApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.2.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.2. Look at the application running on : https://juan-ruiz-countries.netlify.app/
 
 ## Development server
 
