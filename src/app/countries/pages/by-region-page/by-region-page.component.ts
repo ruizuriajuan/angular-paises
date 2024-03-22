@@ -29,6 +29,7 @@ export class ByRegionPageComponent implements OnInit {
   }
 
   searchByRegion( term:Regions)  {
+    this.inicialValue = term;
     this.countryService.searchRegion(term)
     .subscribe( paises =>{ this.paises = paises });
   }
